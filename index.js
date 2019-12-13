@@ -1,4 +1,30 @@
 /* Your Code Here */
+function createEmployeeRecord(arr){
+ let obj= {
+   firstName:arr[0],
+   familyName:arr[1],
+   title:arr[2],
+   payPerHour:arr[3],
+   timeInEvents:[],
+   timeOutEvents:[],
+   
+ }
+ return obj
+}
+
+function createEmployees(arr){
+  return arr.map(obj=>createEmployeeRecord(obj));
+}
+function createTimeInEvent(date_time){
+ 
+  this.timeInEvents.push({type:"TimeIn",hour:parseInt(date_time.split(" ")[1]),date:date_time.split(" ")[0]})
+  return this
+
+}
+function createTimeOutEvent(date_time){
+   this.timeOutEvents.push({type:"TimeOut",hour:parseInt(date_time.split(" ")[1]),date:date_time.split(" ")[0]})
+  return this
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
