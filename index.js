@@ -154,9 +154,6 @@ for(let i=0;i<allRecords.length;i++){
 
 
 }
-//console.log(employees)
-console.log(allRecords);
-console.log(calculatePayroll(allRecords))
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
