@@ -154,6 +154,33 @@ for(let i=0;i<allRecords.length;i++){
 
 
 }
+function wagesEarnedOnDate(date){
+    return (this.payPerHour)*hoursWorkedOnDate.call(this,date)
+}
+//
+let cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
+createTimeInEvent.call(cRecord, "44-03-14 0900")
+createTimeOutEvent.call(cRecord, "44-03-14 2100")
+createTimeInEvent.call(cRecord, "44-03-15 0900")
+createTimeOutEvent.call(cRecord, "44-03-15 1100")
+//console.log(wagesEarnedOnDate.call(emRec,'2014-02-28'))
+//Given an array of multiple employees
+let a=[["Rafiki", "", "Aide", 10],
+["Simba", "", "King", 100]].map(function(e){
+    let a=createEmployeeRecord(e);
+
+    return a;
+})
+let times=[[["2019-01-01 0900", "2019-01-01 1300"],
+["2019-01-02 1000", "2019-01-02 1300"]],[["2019-01-11 0900", "2019-01-11 1300"],
+["2019-01-12 1000", "2019-01-12 1300"]]]
+
+a.forEach(function(e,index){
+    createTimeInEvent.call(e,times[index][0][0]);
+    createTimeInEvent.call(e,times[index][1][0]);
+    createTimeOutEvent.call(e,times[index][0][1]);
+    createTimeOutEvent.call(e,times[index][1][1]);
+})
 //
 
 /*
