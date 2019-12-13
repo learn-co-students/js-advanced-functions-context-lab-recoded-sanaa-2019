@@ -32,7 +32,7 @@ function hoursWorkedOnDate(datework){
     let endwork=this.timeOutEvents.find(function(end){
         return end.date===datework;
     })
-if(endwork==undefined||start==undefined){ return 0; }else return (endwork.hour-start.hour)/100;
+if(endwork==undefined||start==undefined){ return 0; }else return (endwork.hour-start.hour)/60;
 }
 
 /*
