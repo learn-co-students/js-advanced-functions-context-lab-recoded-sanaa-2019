@@ -71,12 +71,11 @@ let allWagesFor = function () {	let allWagesFor = function () {
     })	  
 
     let payable = eligibleDates.reduce(function (memo, d) {	    let payable = eligibleDates.reduce(function (memo, d) {
-        return memo + wagesEarnedOnDate.call(this, d)	        return memo + wagesEarnedOnDate.call(this, d)
-    }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!	    }.bind(this),0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
+        return memo + wagesEarnedOnDate.call(this, d)	      
 
     
-    return payable	    return payable
-} 	}
+    return payable	 }
+    
 console.log(allWagesFor.call(cRecord))
 //Given an array of multiple employees
 function calculatePayroll(arr){
