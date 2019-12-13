@@ -74,9 +74,8 @@ let allWagesFor = function () {	let allWagesFor = function () {
         return memo + wagesEarnedOnDate.call(this, d)	      
 
     
-    return payable	 }
-    
-console.log(allWagesFor.call(cRecord))
+    return payable	 
+
 //Given an array of multiple employees
 function calculatePayroll(arr){
     let total=0;
