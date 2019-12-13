@@ -34,6 +34,9 @@ function hoursWorkedOnDate(datework){
     })
 if(endwork==undefined||startwork==undefined){ return 0; }else return (endwork.hour-start.hour)/100;
 }
+function wagesEarnedOnDate(date){
+    return (this.payPerHour)*hoursWorkedOnDate.call(this,date)
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
