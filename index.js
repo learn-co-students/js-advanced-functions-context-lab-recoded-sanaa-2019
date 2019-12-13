@@ -25,16 +25,14 @@ function createTimeOutEvent(date_time){
    this.timeOutEvents.push({type:"TimeOut",hour:parseInt(date_time.split(" ")[1]),date:date_time.split(" ")[0]})
   return this
 }
-function hoursWorkedOnDate(dat){
-    let n=this.timeInEvents.find(function(ele){
-        return ele.date===dat;
+function hoursWorkedOnDate(datework){
+    let startwork=this.timeInEvents.find(function(start){
+        return start.date===datework;
     })
-    let ot=this.timeOutEvents.find(function(ele){
-        return ele.date===dat;
+    let endwork=this.timeOutEvents.find(function(end){
+        return end.date===datework;
     })
-    if(ot==undefined||n==undefined){
-        return 0;
-    }
+if(endwork==undefined||start==undefined){ return 0; }
 
     else return (ot.hour-n.hour)/100;
 }
