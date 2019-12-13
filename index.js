@@ -25,6 +25,19 @@ function createTimeOutEvent(date_time){
    this.timeOutEvents.push({type:"TimeOut",hour:parseInt(date_time.split(" ")[1]),date:date_time.split(" ")[0]})
   return this
 }
+function hoursWorkedOnDate(dat){
+    let n=this.timeInEvents.find(function(ele){
+        return ele.date===dat;
+    })
+    let ot=this.timeOutEvents.find(function(ele){
+        return ele.date===dat;
+    })
+    if(ot==undefined||n==undefined){
+        return 0;
+    }
+
+    else return (ot.hour-n.hour)/100;
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
