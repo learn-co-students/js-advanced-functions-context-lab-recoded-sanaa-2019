@@ -67,8 +67,7 @@ a.forEach(function(e,index){
 let allWagesFor = function () {	let allWagesFor = function () {
 let eligibleDates = this.timeInEvents.map(function (e) {let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date })	  
-
-    let payable = eligibleDates.reduce(function (memo, d) {	    let payable = eligibleDates.reduce(function (memo, d) {
+ let payable = eligibleDates.reduce(function (memo, d) {	    let payable = eligibleDates.reduce(function (memo, d) {
         return memo + wagesEarnedOnDate.call(this, d)	      
 
     
